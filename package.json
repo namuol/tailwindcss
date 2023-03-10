@@ -45,7 +45,8 @@
     "types/**/*",
     "*.d.ts",
     "*.css",
-    "*.js"
+    "*.js",
+    "oxide/*",
   ],
   "devDependencies": {
     "@swc/cli": "0.1.62",
