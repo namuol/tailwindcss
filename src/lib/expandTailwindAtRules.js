@@ -142,14 +142,14 @@ export default function expandTailwindAtRules(context) {
       // for (let { file, content, extension } of context.changedContent) {
       //   let transformer = getTransformer(context.tailwindConfig, extension)
       //   let extractor = getExtractor(context, extension)
-      //   getClassCandidatesOxide(file, transformer(content), extractor, candidates, seen)
+      //   getClassCandidatesOxide(file, transformer(content, file), extractor, candidates, seen)
       // }
     } else {
       for (let { file, content, extension } of context.changedContent) {
         let transformer = getTransformer(context.tailwindConfig, extension)
         let extractor = getExtractor(context, extension)
         content = file ? fs.readFileSync(file, 'utf8') : content
-        getClassCandidates(transformer(content), extractor, candidates, seen)
+        getClassCandidates(transformer(content, file), extractor, candidates, seen)
       }
     }
 
