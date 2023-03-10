@@ -1,12 +1,12 @@
 {
-  "name": "@namuol/tailwindcss",
+  "name": "tailwindcss",
   "version": "3.2.7",
   "description": "A utility-first CSS framework for rapidly building custom user interfaces.",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
-  "repository": "https://github.com/namuol/tailwindcss.git",
-  "bugs": "https://github.com/namuol/tailwindcss/issues",
+  "repository": "https://github.com/tailwindlabs/tailwindcss.git",
+  "bugs": "https://github.com/tailwindlabs/tailwindcss/issues",
   "homepage": "https://tailwindcss.com",
   "bin": {
     "tailwind": "lib/cli.js",
@@ -18,9 +18,6 @@
   ],
   "tailwindcss": {
     "engine": "oxide"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "dev": "concurrently -n tailwind,oxide-node -c green,yellow 'npm run dev:js' 'npm run dev:rust'",
