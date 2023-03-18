@@ -26,7 +26,7 @@ interface PluginUtils {
 type FilePath = string
 type RawFile = { raw: string; extension?: string }
 type ExtractorFn = (content: string) => string[]
-type TransformerFn = (content: string) => string
+type TransformerFn = (content: string, file?: string) => string
 type ContentConfig =
   | (FilePath | RawFile)[]
   | {
